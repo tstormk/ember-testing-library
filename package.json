@@ -75,6 +75,9 @@
   "engines": {
     "node": ">= 10.*"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "ember": {
     "edition": "octane"
   },
@@ -82,6 +85,9 @@
     "configPath": "tests/dummy/config"
   },
   "release-it": {
+    "git": {
+      "tagName": "v${version}"
+    },
     "github": {
       "release": true
     }
