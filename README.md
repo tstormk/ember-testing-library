@@ -22,7 +22,7 @@ import { module, test } from 'qunit';
 
 import { TestContext as BaseTestContext } from 'ember-test-helpers';
 
-import { setupScreen, ScreenTestContext } from '@testing-library/ember';
+import { setupScreen, ScreenTestContext } from 'ember-testing-library';
 
 interface TestContext extends BaseTestContext, ScreenTestContext {}
 
@@ -38,7 +38,7 @@ module('Integration | Component |  Example', function (hooks) {
 });
 ```
 
-<sub><sup>Please note that the code is importing from `@testing-library/ember`, not
+<sub><sup>Please note that the code is importing from `ember-testing-library`, not
 `ember-testing-library` - this is to match the style of the other DOM Testing
 Libraries.</sup></sub>
 
@@ -52,7 +52,7 @@ If you don't want to inject `this.screen` into every test in your module, you ca
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-import { getScreen } from '@testing-library/ember';
+import { getScreen } from 'ember-testing-library';
 
 module('Integration | Component |  Example', function (hooks) {
   setupRenderingTest(hooks);
@@ -81,7 +81,7 @@ import { TestContext as BaseTestContext } from 'ember-test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import sinon, { SinonSpy } from 'sinon';
 
-import { setupScreen, ScreenTestContext } from '@testing-library/ember';
+import { setupScreen, ScreenTestContext } from 'ember-testing-library';
 
 interface TestContext extends BaseTestContext, ScreenTestContext {
   spy: SinonSpy;

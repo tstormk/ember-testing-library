@@ -1,7 +1,7 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-import { getScreen } from '@testing-library/ember';
+import { getScreen } from 'ember-testing-library';
 
 import assertValidScreen from '../helpers/assert-valid-screen';
 

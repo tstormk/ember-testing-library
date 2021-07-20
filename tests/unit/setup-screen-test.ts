@@ -2,8 +2,7 @@ import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
 import { TestContext as BaseTestContext } from 'ember-test-helpers';
-
-import { setupScreen, ScreenTestContext } from '@testing-library/ember';
+import { setupScreen, ScreenTestContext } from 'ember-testing-library';
 
 import assertValidScreen from '../helpers/assert-valid-screen';
 

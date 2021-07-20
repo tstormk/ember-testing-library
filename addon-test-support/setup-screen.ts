@@ -10,23 +10,11 @@ import getScreen from './get-screen';
  * module has invoked the {@link setupScreen} function.
  *
  * ```my-test.ts
- * import { setupTest } from 'ember-qunit';
- * import { module, test } from 'qunit';
- *
  * import { TestContext as BaseTestContext } from 'ember-test-helpers';
  *
- * import { setupScreen, ScreenTestContext } from '@testing-library/ember';
+ * import { ScreenTestContext } from 'ember-testing-library';
  *
  * interface TestContext extends BaseTestContext, ScreenTestContext {}
- *
- * module('Example', function (hooks) {
- *   setupTest(hooks);
- *   setupScreen(hooks);
- *
- *   test('it works as expected', async function (this: TestContext, assert) {
- *     assert.dom(this.screen.getByLabelText('My text field') as HTMLElement).exists();
- *   });
- * });
  * ```
  */
 export interface ScreenTestContext {

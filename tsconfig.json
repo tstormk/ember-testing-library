@@ -23,8 +23,8 @@
     "paths": {
       "dummy/tests/*": ["tests/*"],
       "dummy/*": ["tests/dummy/app/*", "app/*"],
-      "@testing-library/ember": ["addon-test-support"],
-      "@testing-library/ember/*": ["addon-test-support/*"],
+      "ember-testing-library": ["addon-test-support/index"],
+      "ember-testing-library/*": ["addon-test-support/*"],
       "*": ["types/*"]
     }
   },
