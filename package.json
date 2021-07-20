@@ -25,6 +25,8 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "lint:types": "tsc --noEmit",
+    "prepack": "ember ts:precompile",
+    "postpack": "ember ts:clean",
     "start": "ember serve",
     "test": "ember test",
     "test:all": "ember try:each",
