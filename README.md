@@ -1,15 +1,15 @@
-# @testing-library/ember
+# ember-testing-library
 
 Simple and complete Ember DOM testing utilities that encourage good testing practices.
 
-<small>Please note that this version of the library is not backed by DOM Testing Library like the versions for React, Vue, etc. are. I made this addon because there is no official Ember version yet.</small>
+<sub><sup>Please note that this version of the library is not backed by DOM Testing Library like the versions for React, Vue, etc. are. I made this addon because there is no official Ember version yet.</sup></sub>
 
 ## Installation
 
 This addon can be installed via Ember CLI as such:
 
 ```
-ember install @testing-library/ember
+ember install ember-testing-library
 ```
 
 ## Usage
@@ -37,6 +37,10 @@ module('Integration | Component |  Example', function (hooks) {
   });
 });
 ```
+
+<sub><sup>Please note that the code is importing from `@testing-library/ember`, not
+`ember-testing-library` - this is to match the style of the other DOM Testing
+Libraries.</sup></sub>
 
 Once this function has been called, `this.screen` can be accessed in every `test` in your module. The functions available in `this.screen` are one to one with the queries available in the standard edition of DOM Testing Library. For a thorough list of these, you can see the [official docs](https://testing-library.com/docs/queries/about).
 
