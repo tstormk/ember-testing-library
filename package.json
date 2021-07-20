@@ -1,6 +1,6 @@
 {
   "name": "ember-testing-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple and complete Ember DOM testing utilities that encourage good testing practices.",
   "keywords": [
     "ember-addon",
