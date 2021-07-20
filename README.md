@@ -38,10 +38,6 @@ module('Integration | Component |  Example', function (hooks) {
 });
 ```
 
-<sub><sup>Please note that the code is importing from `ember-testing-library`, not
-`ember-testing-library` - this is to match the style of the other DOM Testing
-Libraries.</sup></sub>
-
 Once this function has been called, `this.screen` can be accessed in every `test` in your module. The functions available in `this.screen` are one to one with the queries available in the standard edition of DOM Testing Library. For a thorough list of these, you can see the [official docs](https://testing-library.com/docs/queries/about).
 
 ### Usage without injection
