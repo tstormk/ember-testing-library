@@ -17,7 +17,7 @@ ember install @testing-library/ember
 The recommended way to use this addon is through the `setupScreen` function. This function automatically injects the DOM Testing Library screen into every test in a given module.
 
 ```ts
-import { setupTest } from 'ember-qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
 import { TestContext as BaseTestContext } from 'ember-test-helpers';
@@ -26,11 +26,13 @@ import { setupScreen, ScreenTestContext } from '@testing-library/ember';
 
 interface TestContext extends BaseTestContext, ScreenTestContext {}
 
-module('Example', function (hooks) {
-  setupTest(hooks);
+module('Integration | Component |  Example', function (hooks) {
+  setupRenderingTest(hooks);
   setupScreen(hooks);
 
   test('it works as expected', async function (this: TestContext, assert) {
+    await render(hbs`<MyComponent />`);
+
     assert.dom(this.screen.getByLabelText('My text field') as HTMLElement).exists();
   });
 });
@@ -43,15 +45,17 @@ Once this function has been called, `this.screen` can be accessed in every `test
 If you don't want to inject `this.screen` into every test in your module, you can use the `getScreen` to access the DOM Testing Library screen as a one off whenever you desire.
 
 ```ts
-import { setupTest } from 'ember-qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
 import { getScreen } from '@testing-library/ember';
 
-module('Example', function (hooks) {
-  setupTest(hooks);
+module('Integration | Component |  Example', function (hooks) {
+  setupRenderingTest(hooks);
 
   test('it works as expected', async function (assert) {
+    await render(hbs`<MyComponent />`);
+
     const screen = getScreen();
 
     assert.dom(screen.getByLabelText('My text field') as HTMLElement).exists();
